@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="home-content-container">
+  <img src="{% static 'images/buffering.png'  %}" class="buffer-icon">
+  <h2>Welcome to ScreenMarker! The application that allows you to log and keep track of the progress you've made on watching your favorite tv shows and films!</h2>
+</div>
+
+{% endblock %}
