@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/show-index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Show List</h1>
+</div>
+
+<div class="container-outta-loop">
+  {% for show in shows %}
+    <div class="shows-container">
+      <img src="{% static 'images/bookmarksquare.png' %}" class="default-screenmarker-icon" alt="Mark on the screen">
+      <h2>{{ show.title }}</h2>
+      {% if show.complete == 'no' %}
+        <p>Not caught up<p>
+      {% else %}
+        <p>Fully caught up<p>
+      {% endif %}
+      <p>{{show.description}}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
