@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Show
 
 # Create your views here.
@@ -20,3 +20,11 @@ def shows_detail(request, show_id):
 class ShowCreate(CreateView):
   model = Show
   fields = '__all__'
+
+class ShowUpdate(UpdateView):
+  model = Show
+  field = ['episodes', 'timestop', 'progress']
+
+class ShowDelete(DeleteView):
+  model = Show
+  success_url = '/shows/'
