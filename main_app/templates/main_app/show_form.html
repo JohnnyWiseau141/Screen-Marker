@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Add a Show or Movie</h1>
+    <p>Please note:</p>
+    <ul>
+      <li><u>Type</u>: Enter "TV Series" or "Movie"</li>
+      <li><u>Runtime</u>: Enter the average or maximum length of an episode, or the total runtime of a movie (in minutes)</li>
+      <li><u>Episodes</u>: enter the total number of episodes in the entire series across all seasons for TV shows (enter 1 for movies)</li>
+      <li><u>Timestop</u>: Enter the time at which you last left off in the episode or movie</li>
+      <li><u>Progress</u>: Enter the last episode number you watched</li>
+    </ul>
+    
+</div>
+
+<form action="" method="post" class="form-container">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <button type="submit" class="btn submit">Submit!</button>
+</form>
+
+{% endblock %}
