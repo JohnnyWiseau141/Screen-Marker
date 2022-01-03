@@ -16,12 +16,9 @@
     <div class="shows-container">
       <img src="{% static 'images/bookmarksquare.png' %}" class="default-screenmarker-icon" alt="Mark on the screen">
       <h2>{{ show.title }}</h2>
-      {% if show.complete == 'no' %}
-        <p>Not caught up<p>
-      {% else %}
-        <p>Fully caught up<p>
-      {% endif %}
       <p>{{show.description}}</p>
+      <h3>Last episode watched: {{ show.progress }}</h3>
+      <h3>Paused at: {{ show.timestop }} minutes </h3>
     </div>
   {% endfor %}
 </div>
