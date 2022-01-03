@@ -7,4 +7,3 @@ class Show(models.Model):
   description = models.TextField(max_length=250)
   runtime = models.IntegerField()
   episodes = models.IntegerField()
-  complete = models.BooleanField()
