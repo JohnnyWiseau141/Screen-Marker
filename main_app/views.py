@@ -23,7 +23,7 @@ class ShowCreate(CreateView):
 
 class ShowUpdate(UpdateView):
   model = Show
-  field = ['episodes', 'timestop', 'progress']
+  fields = ['episodes', 'timestop', 'progress']
 
 class ShowDelete(DeleteView):
   model = Show
