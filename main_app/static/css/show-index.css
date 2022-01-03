@@ -2,3 +2,7 @@
   width: 20%;
   height: auto;
 }
+
+.shows-container {
+  border: 10px solid black;
+}
