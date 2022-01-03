@@ -3,6 +3,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Show
 
 # Create your views here.
@@ -12,15 +14,17 @@ class Home(LoginView):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def shows_index(request):
-  shows = Show.objects.all()
+  shows = Show.objects.filter(user=request.user)
   return render(request, 'shows/index.html', { 'shows': shows })
 
+@login_required
 def shows_detail(request, show_id):
   show = Show.objects.get(id=show_id)
   return render(request, 'shows/detail.html', { 'show': show })
 
-class ShowCreate(CreateView):
+class ShowCreate(LoginRequiredMixin, CreateView):
   model = Show
   fields = '__all__'
 
@@ -28,11 +32,11 @@ class ShowCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class ShowUpdate(UpdateView):
+class ShowUpdate(LoginRequiredMixin, UpdateView):
   model = Show
   fields = ['episodes', 'timestop', 'progress']
 
-class ShowDelete(DeleteView):
+class ShowDelete(LoginRequiredMixin, DeleteView):
   model = Show
   success_url = '/shows/'
 
