@@ -12,4 +12,14 @@
   <h2>Welcome to ScreenMarker! The application that allows you to log and keep track of the progress you've made on watching your favorite tv shows and films!</h2>
 </div>
 
+<section>
+  <form action="{% url 'home' %}" method="post" class="login">
+    <h1>Login</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}">
+    <button type="submit" class="btn submit">Login</button>
+  </form>
+</section>
+
 {% endblock %}

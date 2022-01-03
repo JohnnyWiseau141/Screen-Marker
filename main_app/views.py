@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 from .models import Show
 
 # Create your views here.
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 def about(request):
   return render(request, 'about.html')
@@ -20,6 +21,10 @@ def shows_detail(request, show_id):
 class ShowCreate(CreateView):
   model = Show
   fields = '__all__'
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class ShowUpdate(UpdateView):
   model = Show
