@@ -4,7 +4,7 @@ Welcome to my application, ScreenMarker! The app that lets you keep track of the
 
 ### Getting started
 
-Click [here](heroku link) to start the application. You must login before utilizing the feature.
+Click [here](https://screenmarker.herokuapp.com/) to start the application. You must login before utilizing the feature.
 
 Trello board located [here](https://trello.com/b/NJQp6gF7/screenmarker)
 
