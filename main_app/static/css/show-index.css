@@ -6,3 +6,10 @@
 .shows-container {
   border: 10px solid black;
 }
+
+.container-outta-loop {
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  column-gap: 20px;
+}
