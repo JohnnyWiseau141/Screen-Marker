@@ -10,7 +10,7 @@
 <div class="home-content-container">
   <img src="{% static 'images/buffering.png'  %}" class="buffer-icon">
   <h2>Welcome to ScreenMarker! The application that allows you to log and keep track of the progress you've made on watching your favorite tv shows and films!</h2>
-</div>
+
 
 {% if user.is_authenticated %}
 <p>You are logged in. Add a show or movie to get started</p>
@@ -25,6 +25,8 @@
   </form>
 </section>
 {% endif %}
+
+</div>
 
 
 {% endblock %}

@@ -1,3 +1,20 @@
+ul {
+  display: inline-block;
+  text-align: left;
+}
+
 .direction-list {
   margin: 10px;
+}
+
+.notes-content {
+  text-align: center;
+  align-items: center;
+}
+
+
+
+.form-inputs {
+  display: flex;
+  justify-content: center;
 }

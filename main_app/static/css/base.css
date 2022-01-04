@@ -6,3 +6,21 @@ body {
   height: 25px;
   width: auto;
 }
+
+.nav-items {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  padding: 7px;
+  background: darkblue;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.about-text {
+  text-align: center;
+}
