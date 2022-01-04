@@ -24,3 +24,21 @@ body {
 .about-text {
   text-align: center;
 }
+
+.signup-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-logo {
+  text-align: center;
+}
+
+.baweet-form {
+  text-align: center;
+}
