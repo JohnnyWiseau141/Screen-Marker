@@ -13,13 +13,13 @@
 
 <div class="container-outta-loop">
   {% for show in shows %}
-  <a href="{% url 'shows_detail' show.id %}">
+  <a class="show-links" href="{% url 'shows_detail' show.id %}">
     <div class="shows-container">
       <img src="{% static 'images/bookmarksquare.png' %}" class="default-screenmarker-icon" alt="Mark on the screen">
       <h2>{{ show.title }}</h2>
       <p>{{show.description}}</p>
       <h3>Last episode watched: {{ show.progress }}</h3>
-      <h3>Paused at: {{ show.timestop }} minutes </h3>
+      <h3>Paused at: {{ show.timestop }} </h3>
     </div>
   </a>
   {% endfor %}

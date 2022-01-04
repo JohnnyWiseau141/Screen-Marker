@@ -12,6 +12,9 @@
   <h2>Welcome to ScreenMarker! The application that allows you to log and keep track of the progress you've made on watching your favorite tv shows and films!</h2>
 </div>
 
+{% if user.is_authenticated %}
+<p>You are logged in. Add a show or movie to get started</p>
+{% else %}
 <section>
   <form action="{% url 'home' %}" method="post" class="login">
     <h1>Login</h1>
@@ -21,5 +24,7 @@
     <button type="submit" class="btn submit">Login</button>
   </form>
 </section>
+{% endif %}
+
 
 {% endblock %}

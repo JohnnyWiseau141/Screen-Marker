@@ -5,6 +5,13 @@
 
 .shows-container {
   border: 10px solid black;
+  border-radius: 15px;
+  text-align: center;
+  color: black;
+}
+
+.show-link {
+  text-decoration: none;
 }
 
 .container-outta-loop {
@@ -12,4 +19,8 @@
   flex-flow: row wrap;
   row-gap: 20px;
   column-gap: 20px;
+}
+
+.page-header {
+  text-align: center;
 }
