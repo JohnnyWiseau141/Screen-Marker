@@ -7,10 +7,10 @@ class Show(models.Model):
   title = models.CharField(max_length=100)
   type = models.CharField(max_length=100)
   description = models.TextField(max_length=250)
-  runtime = models.IntegerField()
-  episodes = models.IntegerField()
-  timestop = models.IntegerField()
-  progress = models.IntegerField()
+  runtime = models.CharField(max_length=50)
+  episodes = models.CharField(max_length=50)
+  timestop = models.CharField(max_length=50)
+  progress = models.CharField(max_length=50)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):

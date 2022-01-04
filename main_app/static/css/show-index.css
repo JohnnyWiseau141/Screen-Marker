@@ -9,7 +9,7 @@
 
 .container-outta-loop {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   row-gap: 20px;
   column-gap: 20px;
 }
