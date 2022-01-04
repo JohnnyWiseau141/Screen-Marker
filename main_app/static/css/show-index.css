@@ -4,10 +4,10 @@
 }
 
 .shows-container {
-  border: 10px solid black;
+  border: 10px solid #FFCC00;
   border-radius: 15px;
   text-align: center;
-  color: black;
+  color: #FFCC00;
 }
 
 .show-links {
